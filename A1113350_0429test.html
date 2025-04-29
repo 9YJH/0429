@@ -1,80 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>色卡模板展示</title>
+    <title>台南市65歲以上村里人口統計互動地圖</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
         }
 
-        .color-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .color-card {
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin: 15px;
-            overflow: hidden;
-            max-width: 400px;
-            width: 100%;
+        .container {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        .color-card-header {
+        .card {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
             background-color: #0078d7;
-            color: white;
+            color: #ffffff;
             text-align: center;
             padding: 15px;
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: bold;
         }
 
-        .color-card-body {
+        .card-body {
             padding: 15px;
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #333333;
         }
 
         iframe {
             width: 100%;
-            height: 300px;
+            height: 600px;
             border: none;
-            border-radius: 8px;
-        }
-
-        .color-card-footer {
-            background-color: #f4f4f9;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="color-card-container">
-        <div class="color-card">
-            <div class="color-card-header">
-                圖表展示
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                台南市65歲以上村里人口統計互動地圖
             </div>
-            <div class="color-card-body">
-                <iframe src="https://plotdb.io/v/chart/37293" 
-                        allowfullscreen="true" 
-                        frameborder="0">
-                </iframe>
+            <div class="card-body">
+                此為台南市65歲以上村里人口統計互動地圖，從圖中可以觀察到顏色最深的為仁德區仁義里65歲以上人口共2059人，顏色最淺的為左鎮區二寮里65歲以上人口共51人，人口密度可透過色塊深淺區分。
             </div>
-            <div class="color-card-footer">
-                資料來源：PlotDB.io
-            </div>
+        </div>
+        <div class="card">
+            <iframe src="https://plotdb.io/v/chart/37293" allowfullscreen="true" frameborder="0"></iframe>
         </div>
     </div>
 </body>
