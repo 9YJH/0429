@@ -21,46 +21,33 @@
         }
 
         .card {
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #a3d4f7; /* 柔和藍色外框 */
+            padding: 6px;
+            box-sizing: border-box;
+        }
 
-    /* 藍色外框，柔和又和諧 */
-    border: 4px solid #a3d4f7; /* 淡藍色邊框 */
-    padding: 6px;
-    box-sizing: border-box;
-}
-
-/* 標題也加上圓角 */
-.card-header {
-    background-color: #add8e6;
-    color: #4a4a4a;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 8px; /* 讓標題有圓角 */
-    margin: 4px; /* 與外層邊框保留一點距離更柔和 */
-}
-
-        /* 新增 hover 效果 */
         .card:hover {
-            transform: translateY(-10px); /* 向上移動 */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .card-header {
-            background-color: #add8e6; 
-            color: #4a4a4a; 
+            background-color: #add8e6;
+            color: #4a4a4a;
             text-align: center;
             padding: 15px;
             font-size: 1.5em;
             font-weight: bold;
+            border-radius: 8px; /* 加上圓角 */
+            margin: 4px; /* 與邊框保留距離 */
         }
 
         .card-body {
@@ -69,8 +56,8 @@
             font-size: 1em;
             line-height: 1.5;
             color: #333333;
-            background-color: #ffffff; 
-            border-top: 2px solid #dbefff; 
+            background-color: #ffffff;
+            border-top: 2px solid #dbefff;
         }
 
         .card-content-row {
@@ -100,13 +87,13 @@
 
         @media (max-width: 768px) {
             .card-header {
-                font-size: 1.2em; 
-                padding: 10px; 
+                font-size: 1.2em;
+                padding: 10px;
             }
 
             .card-body {
-                font-size: 0.9em; 
-                padding: 10px; 
+                font-size: 0.9em;
+                padding: 10px;
             }
 
             .card-content-row {
@@ -120,26 +107,25 @@
             }
 
             iframe {
-                height: 400px; 
+                height: 400px;
             }
         }
 
         @media (max-width: 480px) {
             .card-header {
-                font-size: 1em; 
-                padding: 8px; 
+                font-size: 1em;
+                padding: 8px;
             }
 
             .card-body {
-                font-size: 0.8em; 
-                padding: 8px; 
+                font-size: 0.8em;
+                padding: 8px;
             }
 
             iframe {
-                height: 300px; 
+                height: 300px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -177,8 +163,6 @@
         <div class="card">
             <iframe src="https://plotdb.io/v/chart/37367" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
         </div>
-
-        <!-- 新增的色卡 -->
         <div class="card">
             <div class="card-header">
                 樂齡共響
@@ -191,12 +175,4 @@
                     <strong>行動方案與效益：</strong>
                     <ol>
                         <li>社區音樂會：透過社區與學校合作，定期舉辦社區音樂會與音樂比賽，邀請長者參與演奏或分享音樂故事，鼓勵學生與年輕人參與，增進世代互動。</li>
-                        <li>跨世代交流：透過活動讓年輕人與長者學習傳統文化知識，讓長者們仍然能夠感受到自己對於社會的實質貢獻，達成敬老的目的。</li>
-                        <li>提升社會參與度：透過音樂文藝活動，我們期望能與長者更加親近，提升長者的社會參與度、減少孤獨感。</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                        <li>跨世代交流：透過活動讓年輕人與長者學習傳統文化知識，讓長者們仍
