@@ -20,14 +20,6 @@
             box-sizing: border-box;
         }
 
-        .card-wrapper {
-            border: 3px dashed #ffb6c1; /* 粉紅色虛線外框 */
-            border-radius: 15px; /* 圓角外框 */
-            padding: 10px;
-            margin-bottom: 20px;
-            background-color: #fff1f5; /* 柔和背景色 */
-        }
-
         .card {
             background: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,9 +27,11 @@
             overflow: hidden;
             width: 100%;
             max-width: 800px;
+            margin-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* 新增 hover 效果 */
         .card:hover {
             transform: translateY(-10px); /* 向上移動 */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
@@ -70,10 +64,9 @@
         }
 
         .card-content-row img {
-            max-width: 250px; /* 調整圖片大小 */
+            max-width: 200px;
             object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         .card-content-row .text-content {
@@ -149,84 +142,56 @@
 </head>
 <body>
     <div class="container">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-header">
-                    台南市65歲以上村里人口統計互動地圖
-                </div>
-                <div class="card-body">
-                    此為台南市65歲以上村里人口統計互動地圖，從圖中可以觀察到顏色最深的為仁德區仁義里65歲以上人口共2059人，顏色最淺的為左鎮區二寮里65歲以上人口共51人，人口密度可透過色塊深淺區分，而大部分的65歲以上人口幾乎集中於原台南縣或是非市區區域，加上少數偏遠地區的人口較為稀少，若無完善的社會福利政策，可能面臨醫療照護資源不足等問題。
-                </div>
+        <div class="card">
+            <div class="card-header">
+                台南市65歲以上村里人口統計互動地圖
+            </div>
+            <div class="card-body">
+                此為台南市65歲以上村里人口統計互動地圖，從圖中可以觀察到顏色最深的為仁德區仁義里65歲以上人口共2059人，顏色最淺的為左鎮區二寮里65歲以上人口共51人，人口密度可透過色塊深淺區分，而大部分的65歲以上人口幾乎集中於原台南縣或是非市區區域，加上少數偏遠地區的人口較為稀少，若無完善的社會福利政策，可能面臨醫療照護資源不足等問題。
             </div>
         </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <iframe src="https://plotdb.io/v/chart/37293" allowfullscreen="true" frameborder="0"></iframe>
+        <div class="card">
+            <iframe src="https://plotdb.io/v/chart/37293" allowfullscreen="true" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                台南市65歲至79歲村里人口統計互動地圖
+            </div>
+            <div class="card-body">
+                此為台南市65-79歲村里人口統計互動地圖，從圖中可以觀察到人口數最大值為1796人，最小值為36人，人口密度可透過色塊深淺區分，透過與台南市65歲以上村里人口統計互動地圖做比較可以發現分布狀況差不多，人口分布有一定落差，偏遠地區的65歲至79歲人口分布稀少，若社會福利不足，偏遠地區的長者可能會缺乏醫療照護措施。
             </div>
         </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-header">
-                    台南市65歲至79歲村里人口統計互動地圖
-                </div>
-                <div class="card-body">
-                    此為台南市65-79歲村里人口統計互動地圖，從圖中可以觀察到人口數最大值為1796人，最小值為36人，人口密度可透過色塊深淺區分，透過與台南市65歲以上村里人口統計互動地圖做比較可以發現分布狀況差不多，人口分布有一定落差，偏遠地區的65歲至79歲人口分布稀少，若社會福利不足，偏遠地區的長者可能會缺乏醫療照護措施。
-                </div>
+        <div class="card">
+            <iframe src="https://plotdb.io/v/chart/37349" allowfullscreen="true" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                台南市80歲以上村里人口統計互動地圖
+            </div>
+            <div class="card-body">
+                此為台南市80歲以上村里人口統計互動地圖，從圖中可以觀察到人口數最大值為317人，最小值為12人，人口密度可透過色塊深淺區分，透過這些數據可以進一步分析高齡化現象對各區域的影響。
             </div>
         </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <iframe src="https://plotdb.io/v/chart/37349" allowfullscreen="true" frameborder="0"></iframe>
-            </div>
+        <div class="card">
+            <iframe src="https://plotdb.io/v/chart/37367" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
         </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-header">
-                    台南市80歲以上村里人口統計互動地圖
-                </div>
-                <div class="card-body">
-                    此為台南市80歲以上村里人口統計互動地圖，從圖中可以觀察到人口數最大值為317人，最小值為12人，人口密度可透過色塊深淺區分，透過這些數據可以進一步分析高齡化現象對各區域的影響。
-                </div>
+
+        <!-- 新增的色卡 -->
+        <div class="card">
+            <div class="card-header">
+                樂齡共響
             </div>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <iframe src="https://plotdb.io/v/chart/37367" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-            </div>
-        </div>
-        
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-header">
-                    樂齡共響
-                </div>
-                <div class="card-content-row">
-                    <img src="集點子.jpeg" alt="樂齡共響">
-                    <div class="text-content">
-                        <div class="text-box">
-                            <p>
-                                在高齡化的社會中，大家首要關注的通常都是長者的身體健康，但是我認為<strong>長者的心理健康層面也固然重要</strong>。
-                                許多長者面臨孤獨感、心理健康挑戰以及社會參與機會不足的問題。
-                            </p>
-                            <p>
-                                透過資料集的觀察與分析，而我所居住的
-                                <strong>中西區A11類別</strong>人數9655人僅占全台南市的1.6%，
-                                A22為1503人占比23%，A33為17人占比3.5%，
-                                發現台南市區老年人口分布有落差。
-                            </p>
-                            <p>
-                                因此不同地區可能面臨資源分配不均的問題，希望透過合理分配台南市的社區資源，推動長期穩定的社區行動，
-                                也希望音樂文藝活動能作為一座連接長者與社會的橋樑，<strong>提升生活與心靈品質</strong>，甚至達成自我實現。
-                            </p>
-                            <br>
-                            <strong>行動方案與效益：</strong>
-                            <ol>
-                                <li><strong>社區音樂會：</strong>透過社區與學校合作，定期舉辦社區音樂會與音樂比賽，邀請長者參與演奏或分享音樂故事，鼓勵學生與年輕人參與，增進世代互動。</li>
-                                <li><strong>跨世代交流：</strong>透過活動讓年輕人與長者學習傳統文化知識，讓長者們仍然能夠感受到自己對於社會的實質貢獻，達成敬老的目的。</li>
-                                <li><strong>提升社會參與度：</strong>透過音樂文藝活動，我們期望能與長者更加親近，提升長者的社會參與度、減少孤獨感。</li>
-                            </ol>
-                        </div>
-                    </div>
+            <div class="card-content-row">
+                <img src="集點子.jpeg" alt="樂齡共響">
+                <div class="text-content">
+                    在高齡化的社會中，大家首要關注的通常都是長者的身體健康，但是我認為長者的心理健康層面也固然重要，許多長者面臨孤獨感、心理健康挑戰以及社會參與機會不足的問題。透過資料集的觀察與分析，而我所居住的中西區A11類別人數9655人僅占全台南市的1.6%，A22為1503人占比23%，A33為17人占比3.5%，發現台南市區老年人口分布有落差，因此不同地區可能面臨資源分配不均的問題，希望透過合理分配台南市的社區資源，推動長期穩定的社區行動，也希望音樂文藝活動能作為一座連接長者與社會的橋樑，不僅可以提升長者們的生活與心靈品質，甚至透過不同的活動與圓夢計畫進一步的達成自我實現。
+                    <br><br>
+                    <strong>行動方案與效益：</strong>
+                    <ol>
+                        <li>社區音樂會：透過社區與學校合作，定期舉辦社區音樂會與音樂比賽，邀請長者參與演奏或分享音樂故事，鼓勵學生與年輕人參與，增進世代互動。</li>
+                        <li>跨世代交流：透過活動讓年輕人與長者學習傳統文化知識，讓長者們仍然能夠感受到自己對於社會的實質貢獻，達成敬老的目的。</li>
+                        <li>提升社會參與度：透過音樂文藝活動，我們期望能與長者更加親近，提升長者的社會參與度、減少孤獨感。</li>
+                    </ol>
                 </div>
             </div>
         </div>
