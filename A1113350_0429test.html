@@ -1,102 +1,115 @@
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #eaf6ff; 
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf6ff; 
+        }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .card {
-        background: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        width: 100%;
-        max-width: 800px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .card {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    /* 新增 hover 效果 */
-    .card:hover {
-        transform: translateY(-10px); /* 向上移動 */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
-    }
+        /* 新增 hover 效果 */
+        .card:hover {
+            transform: translateY(-10px); /* 向上移動 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+        }
 
-    .card-header {
-        background-color: #add8e6; 
-        color: #4a4a4a; 
-        text-align: center;
-        padding: 15px;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .card-body {
-        padding: 15px;
-        text-align: center;
-        font-size: 1em;
-        line-height: 1.5;
-        color: #333333;
-        background-color: #ffffff; 
-        border-top: 2px solid #dbefff; 
-    }
-
-    iframe {
-        width: 100%;
-        height: 600px;
-        border: none;
-    }
-
-    @media (max-width: 768px) {
         .card-header {
-            font-size: 1.2em; 
-            padding: 10px; 
+            background-color: #add8e6; 
+            color: #4a4a4a; 
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
         .card-body {
-            font-size: 0.9em; 
-            padding: 10px; 
+            padding: 15px;
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #333333;
+            background-color: #ffffff; 
+            border-top: 2px solid #dbefff; 
         }
 
         iframe {
-            height: 400px; 
-        }
-    }
-
-    @media (max-width: 480px) {
-        .card-header {
-            font-size: 1em; 
-            padding: 8px; 
+            width: 100%;
+            height: 600px;
+            border: none;
         }
 
-        .card-body {
-            font-size: 0.8em; 
-            padding: 8px; 
+        @media (max-width: 768px) {
+            .card-header {
+                font-size: 1.2em; 
+                padding: 10px; 
+            }
+
+            .card-body {
+                font-size: 0.9em; 
+                padding: 10px; 
+            }
+
+            iframe {
+                height: 400px; 
+            }
         }
 
-        iframe {
-            height: 300px; 
-        }
-    }
-</style>
+        @media (max-width: 480px) {
+            .card-header {
+                font-size: 1em; 
+                padding: 8px; 
+            }
 
-<script>
-    // 可選：添加點擊事件以進一步擴展互動性
-    document.addEventListener('DOMContentLoaded', () => {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                alert('您點擊了卡片！');
+            .card-body {
+                font-size: 0.8em; 
+                padding: 8px; 
+            }
+
+            iframe {
+                height: 300px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">卡片標題</div>
+            <div class="card-body">這是一個卡片的內容。</div>
+        </div>
+    </div>
+
+    <script>
+        // 可選：添加點擊事件以進一步擴展互動性
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    alert('您點擊了卡片！');
+                });
             });
         });
-    });
-</script>
+    </script>
+</body>
+</html>
