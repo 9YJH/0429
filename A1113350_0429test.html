@@ -21,15 +21,32 @@
         }
 
         .card {
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* 藍色外框，柔和又和諧 */
+    border: 4px solid #a3d4f7; /* 淡藍色邊框 */
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+/* 標題也加上圓角 */
+.card-header {
+    background-color: #add8e6;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px; /* 讓標題有圓角 */
+    margin: 4px; /* 與外層邊框保留一點距離更柔和 */
+}
 
         /* 新增 hover 效果 */
         .card:hover {
@@ -122,21 +139,6 @@
                 height: 300px; 
             }
         }
-        .card {
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    /* 新增可愛的粉紅色外框 */
-    border: 4px solid #ffd3e0; /* 柔和粉紅外框 */
-    padding: 6px; /* 外框與內部內容稍微間隔，不壓縮內容 */
-    box-sizing: border-box; /* 確保 padding 不影響整體寬度 */
-}
 
     </style>
 </head>
