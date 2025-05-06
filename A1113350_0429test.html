@@ -1,128 +1,102 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台南市65歲以上村里人口統計互動地圖</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eaf6ff; 
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #eaf6ff; 
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-        .card {
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
+    .card {
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    /* 新增 hover 效果 */
+    .card:hover {
+        transform: translateY(-10px); /* 向上移動 */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+    }
+
+    .card-header {
+        background-color: #add8e6; 
+        color: #4a4a4a; 
+        text-align: center;
+        padding: 15px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 15px;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #333333;
+        background-color: #ffffff; 
+        border-top: 2px solid #dbefff; 
+    }
+
+    iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
         .card-header {
-            background-color: #add8e6; 
-            color: #4a4a4a; 
-            text-align: center;
-            padding: 15px;
-            font-size: 1.5em;
-            font-weight: bold;
+            font-size: 1.2em; 
+            padding: 10px; 
         }
 
         .card-body {
-            padding: 15px;
-            text-align: center;
-            font-size: 1em;
-            line-height: 1.5;
-            color: #333333;
-            background-color: #ffffff; 
-            border-top: 2px solid #dbefff; 
+            font-size: 0.9em; 
+            padding: 10px; 
         }
 
         iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
+            height: 400px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card-header {
+            font-size: 1em; 
+            padding: 8px; 
         }
 
-        @media (max-width: 768px) {
-            .card-header {
-                font-size: 1.2em; 
-                padding: 10px; 
-            }
-
-            .card-body {
-                font-size: 0.9em; 
-                padding: 10px; 
-            }
-
-            iframe {
-                height: 400px; 
-            }
+        .card-body {
+            font-size: 0.8em; 
+            padding: 8px; 
         }
 
-        @media (max-width: 480px) {
-            .card-header {
-                font-size: 1em; 
-                padding: 8px; 
-            }
-
-            .card-body {
-                font-size: 0.8em; 
-                padding: 8px; 
-            }
-
-            iframe {
-                height: 300px; 
-            }
+        iframe {
+            height: 300px; 
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                台南市65歲以上村里人口統計互動地圖
-            </div>
-            <div class="card-body">
-                此為台南市65歲以上村里人口統計互動地圖，從圖中可以觀察到顏色最深的為仁德區仁義里65歲以上人口共2059人，顏色最淺的為左鎮區二寮里65歲以上人口共51人，人口密度可透過色塊深淺區分，而大部分的65歲以上人口幾乎集中於原台南縣或是非市區區域，加上少數偏遠地區的人口較為稀少，若無完善的社會福利政策，可能面臨醫療照護資源不足等問題。
-            </div>
-        </div>
-        <div class="card">
-            <iframe src="https://plotdb.io/v/chart/37293" allowfullscreen="true" frameborder="0"></iframe>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                台南市65歲至79歲村里人口統計互動地圖
-            </div>
-            <div class="card-body">
-                此為台南市65-79歲村里人口統計互動地圖，從圖中可以觀察到人口數最大值為1796人，最小值為36人，人口密度可透過色塊深淺區分，透過與台南市65歲以上村里人口統計互動地圖做比較可以發現分布狀況差不多，人口分布有一定落差，偏遠地區的65歲至79歲人口分布稀少，若社會福利不足，偏遠地區的長者可能會缺乏醫療照護措施。
-            </div>
-        </div>
-        <div class="card">
-            <iframe src="https://plotdb.io/v/chart/37349" allowfullscreen="true" frameborder="0"></iframe>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                台南市80歲以上村里人口統計互動地圖
-            </div>
-            <div class="card-body">
-                此為台南市80歲以上村里人口統計互動地圖，從圖中可以觀察到人口數最大值為317人，最小值為12人，人口密度可透過色塊深淺區分，透過這些數據可以進一步分析高齡化現象對各區域的影響。
-            </div>
-        </div>
-        <div class="card">
-            <iframe src="https://plotdb.io/v/chart/37367" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-        </div>
-    </div>
-</body>
-</html>
+    }
+</style>
+
+<script>
+    // 可選：添加點擊事件以進一步擴展互動性
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                alert('您點擊了卡片！');
+            });
+        });
+    });
+</script>
